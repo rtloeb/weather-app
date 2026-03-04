@@ -1,6 +1,7 @@
 package com.example.weather.data.repository
 
 import com.example.weather.data.model.City
+import com.example.weather.data.model.CityList
 import com.example.weather.data.model.WeatherResponse
 import com.example.weather.data.remote.RetrofitInstance
 

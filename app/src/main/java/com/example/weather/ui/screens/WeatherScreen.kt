@@ -11,6 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.weather.data.model.City
+import com.example.weather.data.model.CityList
 import com.example.weather.data.model.WeatherResponse
 import com.example.weather.data.repository.WeatherRepository
 import kotlinx.coroutines.launch
