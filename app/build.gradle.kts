@@ -22,16 +22,26 @@ android {
         }
     }
 
+    // 从环境变量或 gradle.properties 读取签名配置
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    val keystoreProperties = java.util.Properties()
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(java.io.FileInputStream(keystorePropertiesFile))
+    }
+
     signingConfigs {
         create("release") {
-            storeFile = file("../weather-app-release-key.jks")
-            storePassword = "weather123"
-            keyAlias = "weather-app"
-            keyPassword = "weather123"
+            storeFile = file(System.getenv("KEYSTORE_FILE") ?: keystoreProperties["storeFile"] ?: "../weather-app-release-key.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD") ?: keystoreProperties["storePassword"] as? String ?: ""
+            keyAlias = System.getenv("KEY_ALIAS") ?: keystoreProperties["keyAlias"] as? String ?: "weather-app"
+            keyPassword = System.getenv("KEY_PASSWORD") ?: keystoreProperties["keyPassword"] as? String ?: ""
         }
     }
     
     buildTypes {
+        debug {
+            signingConfig = signingConfigs.getByName("debug")
+        }
         release {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
