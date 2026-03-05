@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Weather App</string>
+    <string name="app_name">天气应用</string>
+    <string name="title_weather_app">天气应用</string>
+    <string name="title_7day_forecast">7 天预报</string>
+    <string name="label_humidity">湿度</string>
+    <string name="label_wind">风速</string>
+    <string name="label_feels_like">体感温度</string>
+    <string name="label_select_city">选择城市</string>
+    <string name="action_cancel">取消</string>
+    <string name="error_prefix">错误：</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_percent">%</string>
+    <string name="unit_km_h">km/h</string>
+    
+    <!-- 天气描述 -->
+    <string name="weather_clear_sky">晴朗</string>
+    <string name="weather_partly_cloudy">多云</string>
+    <string name="weather_foggy">雾</string>
+    <string name="weather_drizzle">毛毛雨</string>
+    <string name="weather_rain">雨</string>
+    <string name="weather_snow">雪</string>
+    <string name="weather_snow_grains">雪粒</string>
+    <string name="weather_showers">阵雨</string>
+    <string name="weather_snow_showers">阵雪</string>
+    <string name="weather_thunderstorm">雷暴</string>
+    <string name="weather_unknown">未知</string>
 </resources>
